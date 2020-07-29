@@ -1,0 +1,28 @@
+obsWindField="HNC_windMap.pickle"  #Python pickle containing wind speed (and errors) for each image pixel
+
+mol = 'HNC'  #Molecule name
+mass = 27  #Molecular mass /amu
+transition = 3  #Zero-indexed transition from JPL catalog file
+
+#Set up the (linear gradient) abundance profile as a function of altitude
+alt1 = 790  #Cut-in altitude /km (zero abundance below)
+loga1= -7.4 #Log10 abundance at alt1
+alt2 = 1077 #Cutoff altitude /km (constant abundance above)
+loga2= -4.5 #Log10 abundance at alt1
+
+platescale = 0.025  #Pixel size of input/output grid /arcsec
+distance = 9.21 #Distance to titan /AU
+sublat = 26.5 #Sub-observer latitude /degrees
+ccw = 5.3 #Polar rotation /degrees (in plane of sky, CCW from celestial north)
+beamxas = 0.241 #Beam width /as
+beamyas = 0.237 #Beam width /as
+beampa = -81.3  #Beam position angle /degrees
+
+# Initial Gaussian wind velocity profile
+vpeak = 300 #Peak velocity (v_max) /m/s
+offset = 0. #Peak latitude (phi_0) /degrees
+fwhm=50.    #FWHM /degrees
+
+pfix=[False,False,False] #Hold the individual Gaussian parameters fixed during fitting
+
+showplots=True

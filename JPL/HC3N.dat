@@ -1,0 +1,26 @@
+\\ Species Tag:        &   051501 & Name:& HC3N
+\\ Version:            &       1 & &  Cyanoacetylene, Propynenitrile, v = 0
+\\ Date:       &  Oct. 2000    & & 
+\\ Contributor:&  S. Thorwirth, H. S. P. Müller & &
+\\             &                 & &
+\\ Lines Listed:       &    207 & Q(300.0)=& 1374.9098
+\\ Freq. (GHz) $<$     &     1864 & Q(225.0)=& 1031.1809
+\\ Max. J:             &      207 & Q(150.0)=& 687.5086
+\\ LOGSTR0=            &   -12.0 & Q(75.00)=& 343.8929
+\\ LOGSTR1=            &   -14.0   & Q(37.50)=& 172.1063
+\\ Isotope Corr.:      &     0.0 & Q(18.75)=& 86.2186
+\\ Egy. (cm$^{-1}$) $>$& 0.0  & Q(9.375)=& 43.2767
+\\ $\mu_a$ = & 3.73172              & A=&
+\\ $\mu_b$ = &                   & B=& 4549.059
+\\ $\mu_c$ = &                   & C=&
+\headend
+
+The experimental frequencies have been reported by
+(1) R. L. de Zafra, 1971, Astrophys. J. 170, 165; by
+(2) R. A. Creswell, G. Winnewisser, and M. C. L. Gerry, 1977, J. Mol. Spectrosc. 65, 420; by
+(3) P. D. Mallinson and R. L. de Zafra, 1978, Mol. Phys. 36, 827; by
+(4) W. Chen, R. Bocquet, G. Wlodarczak, and D. Boucher, 1991, Int. J. Infrared Millimeter Waves 12, 987 by;
+(5) K. M. T. Yamada, A. Moravec, and G. Winnewisser, 1995, Z. Naturforsch. 50a, 1179; and by
+(6) S. Thorwirth, H. S. P. Müller, and G. Winnewisser, 2000, J. Mol. Spectrosc. 204, 133.
+The dipole moment was determined by (7) R. L. DeLeon and J. S. Muenter, 1985, J. Chem. Phys. 82, 1702.
+Predictions considering hyperfine splitting (J< 22) and related partition functions and selected vibrational contributions to the partition function are also available.

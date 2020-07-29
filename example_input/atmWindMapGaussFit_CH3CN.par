@@ -1,0 +1,30 @@
+obsWindField="CH3CN_windMap.pickle"   #Python pickle containing wind speed (and errors) for each image pixel
+
+mol = 'CH3CN'   #Molecule name
+mass=41  #Molecular mass /amu
+transition = 187  #Zero-indexed transition from JPL catalog file
+
+#Set up the (linear gradient) abundance profile as a function of altitude
+alt1 = 200. #Cut-in altitude /km (zero abundance below)
+loga1= -8.8 #Log10 abundance at alt1
+alt2 = 400 #Cutoff altitude /km (constant abundance above)
+loga2= -7.0 #Log10 abundance at alt1
+
+platescale = 0.025  #Pixel size of input/output grid /arcsec
+distance = 9.21 #Distance to titan /AU
+sublat = 26.5 #Sub-observer latitude /degrees
+ccw = 5.3 #Polar rotation /degrees (in plane of sky, CCW from celestial north)
+beamxas = 0.274 #Beam width /as
+beamyas = 0.253 #Beam width /as
+beampa = -7.0 #Beam position angle (deg)
+
+# v(lat) function - Gaussian
+vpeak = 150 #Peak velocity (v_max) /m/s
+offset = -20. #Peak latitude (phi_0) /degrees
+fwhm=100. #FWHM /degrees
+
+pfix=[False,False,False] #Hold the individual Gaussian parameters fixed during fitting
+
+showplots=True
+
+

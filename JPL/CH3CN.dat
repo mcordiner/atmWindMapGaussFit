@@ -1,0 +1,59 @@
+\\ Species Tag:        &   041505 & Name:&  CH3CN          
+\\ Version:            &       2 & &  Methyl cyanide, acetonitrile, cyanomethane, v = 0
+\\ Date:       &  Nov. 2016      & & 
+\\ Contributor:&  H. S. P. M\"uller  & & g.s. 
+\\             &                 & & 
+\\ Lines Listed:       &    2423 & Q(300.0)=&    15130.4545
+\\ Freq. (GHz) $<$     &    1986 & Q(225.0)=&     8130.4079
+\\ Max. J:             &      109 & Q(150.0)=&     3811.9477 
+\\ LOGSTR0=            &    -7.7 & Q(75.00)=&     1267.6705 
+\\ LOGSTR1=            &    -8.5 & Q(37.50)=&      449.0811
+\\ Isotope Corr.:      &       0.& Q(18.75)=&      164.3168 
+\\ Egy. (cm$^{-1}$) $>$&     0.0 & Q(9.375)=&       64.0955 
+\\ $\mu_a$ = & 3.9220       & A=& 158099.0
+\\ $\mu_b$ = &                   & B=&   9198.8992
+\\ $\mu_c$ = &                   & C=&   B
+\headend 
+
+While the first entry from Dec. 2009 was restricted to ground state data only, the present entry is based on data pertaining to the vibrational states v8 ≤ 2 and takes into account interactions between these states. Interactions with states v4 = 1, v7 = 1, and v8 = 3 were accounted for through spectroscopic parameters and appropriate interaction parameters. The fit was described in
+(1) H. S. P. Müller, L. R. Brown, B. J. Drouin, J. C. Pearson, I. Kleiner, R. L. Sams, K. Sung, M. H. Ordu, and F. Lewen,
+2015, J. Mol. Spectrosc. 312, 22.
+Vibrational ground state data with 14N hyperfine splitting were taken from
+(2) S. G. Kukolich, D. J. Ruben, J. H. S. Wang, and J. R. Williams, 1973, J. Chem. Phys. 58, 3155;
+from
+(3) S. G. Kukolich, 1982, J. Chem. Phys. 76, 97;
+and from
+(4) D. Boucher, J. Burie, J. Demaison, A. Dubrulle, J. Legrand, and B. Segard, 1977, J. Mol. Spectrosc. 64, 290.
+Additional, extensive data between 91 ans 790 GHz were taken from
+(5) G. Cazzoli and C. Puzzarini, 2006, J. Mol. Spectrosc. 240, 153.
+Two K = 14 transitions were taken from
+(6) M. Šimecková, Š. Urban, U. Fuchs, F. Lewen, G. Winnewisser, I. Morino, K.M.T. Yamada, 2004, J. Mol. Spectrosc. 226, 123.
+Further extensive data up to 1.63 THz were reported in (1) and in
+(7) H. S. P. Müller, B. J. Drouin, and J. C. Pearson, 2009, Astron. Astrophys. 506, 1487.
+The purely K-dependent terms were determined through ΔK = 3 infrared loops from
+(8) R. Anttila, V.-M. Horneman, M. Koivusaari, and R. Paso, 1993, J. Mol. Spectrosc. 157, 198,
+and from the interactions treated in (1).
+The v8 = 1 data were mostly taken from (1). Additional millimeter wave data come from
+(9) A. Bauer and S. Maes, 1969, J. Phys. (Paris) 30, 169.
+The ν8 data were published by
+(10) M. Koivusaari, V.-M. Horneman, and R. Anttila, 1992, J. Mol. Spectrosc. 152, 377.
+The v8 = 2 data as well as the 2ν8 data were mostly taken from (1). Additional data come from
+(11) A. Bauer and S. Maes, 1969, C. R. Acad. Sci. Ser. B 268, 1569,
+and from
+(12) R. Bocquet, G. Wlodarczak, A. Bauer, and J. Demaison, 1988, J. Mol. Spectrosc. 127, 382.
+Parameters of three higher vibrational states were taken from
+(13) A.-M. Tolonen, M. Koivusaari, J. Schroderus, S. Alanko, and R. Anttila, 1993, J. Mol. Spectrosc. 160, 554.
+Vibrational identifiers in this and related entries are
+0 for v = 0 (1 with HFS),
+2 for v8 = 1, l = –1 (4 with HFS),
+3 for v8 = 1, l = +1 (5 with HFS),
+6 for v8 = 2, l = 0 (9 with HFS),
+7 for v8 = 2, l = +2 (10 with HFS),
+8 for v8 = 2, l = –2 (11 with HFS).
+Transitions between vibrational states occur in the lower energy entry.
+The predictions should be reliable throughout.
+14N hyperfine splitting may be resolvable at low values of J and possibly at the highest K. Therefore, predictions with hyperfine splitting have been provided up to J' = 15 (280 GHz) along with partition function values. The rotational part of the partition function is complete up to 500 K (J up to 140 and K up to 30). Vibrational contributions have been considered in the calculation of the partition function for states up to about 1200 cm–1. Higher vibrational states contribute to less than 3.0 % at 300 K. Additional information on vibrational states is also available.
+At low temperatures, it may be necessary to discern between A-CH3CN and E-CH3CN. The A state levels are described by K = 3n, those of E state by K = 3n ± 1. The nuclear spin-weight ratio is 2 : 1 for A-CH3CN with K > 0 and all other states, respectively. The JK = 11 level is the lowest E state level. It is 5.5803 cm–1 above ground.
+Nov. 2010: separate E and A predictions are available along with separate E and A partition function values. NOTE: Before any analyses are performed treating E and A states separately the effects of optical depth ought to be evaluated carefully ! These data are from the previous entry.
+The ground state dipole moment was determined by
+(14) J. Gadhi, A. Lahrouni, J. Legrand, and J. Demaison, 1995, J. Chim. Phys. 92, 1984.
