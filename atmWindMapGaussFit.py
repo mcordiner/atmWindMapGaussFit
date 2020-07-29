@@ -1,9 +1,11 @@
 #! /usr/bin/env python
 #
-# Generate synthetic wind map based on supplied latitudinal wind profile (in this case, it's Gaussian)
-# Take the moment 1 of the synthetic (convolved) data cube and compare with observed Doppler map to optimize the wind profile. The convolved wind map is flux-weighted according to the molecular emission, based on the supplied vertical abundance profile.
+# This is the main Python executable, to be run from the command line (requires Python 3, scipy, astropy)
 #
-# Run this code directly from the command line, using supplied input file as a template (requires Python 3, scipy, astropy)
+# The basic method is to generate a synthetic wind map based on the supplied latitudinal wind profile (in this case, it's Gaussian).
+# Then we take the moment 1 of the synthetic (convolved) data cube and compare it with observed Doppler map to optimize the wind profile. 
+# The convolved wind map is flux-weighted according to the molecular emission, based on a supplied vertical abundance profile.
+
 
 import os,sys
 import numpy as np
