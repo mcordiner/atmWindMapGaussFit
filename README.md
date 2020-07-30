@@ -17,4 +17,6 @@ Best-fitting Gaussian wind profile parameters (and their 1-sigma errors) are pri
 
 The code requires Python 3, scipy and astropy to be installed.
 
-IF YOU USE THIS CODE IN YOUR RESEARCH, PLEASE CITE CORDINER ET AL. (2020, SUBMITTED TO GRL)
+*******************************************************************************************
+If you use this code in your research, please cite Cordiner et al. (2020, submitted to GRL)
+*******************************************************************************************
