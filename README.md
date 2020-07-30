@@ -1,5 +1,5 @@
 # atmWindMapGaussFit
-Python executable code to generate best-fitting Gaussian wind speed profile (as a function of latitude) based on supplied 2D wind map.
+Python executable code to generate best-fitting Gaussian wind speed profile (as a function of latitude) based on supplied 2D Doppler wind map (on a sky-projected cartesian grid).
 
 A synthetic Doppler wind map is generated using on the supplied latitudinal wind profile - parameterised by the gaussian peak velocity, FWHM and latitudinal offset. 
 
@@ -11,8 +11,8 @@ e.g.> ./atmWindMapGaussFit.py <input_parameter_filename.par>
 
 Example input parameter files are in the example_input/ directory
 
-The input parameter file must contain a reference to a python pickle, which contains the following dictionaries (1) 'v': an array of observed line-of-sight wind speeds as a function of image pixel, (2) 'v_errup' and 'v_errlo': 1-sigma upper and lower error margins, respectively, on each velocity measurement.
+The input parameter file must contain a reference to a python pickle, which contains the following dictionary keys and values (1) 'v': a 2D numpy array of observed line-of-sight wind speeds as a function of image pixel, (2) 'v_errup' and 'v_errlo': 1-sigma upper and lower error margins, respectively, on each velocity measurement.
 
-Best-fitting Gaussian wind profile parameters (and their 1-sigma errors) are printed to the terminal after the code completes. The synthetic (convolved) 2D wind field is written to a Python pickle in the current working directory, and the latitudinal wind speed profile is written to a text file.
+Best-fitting Gaussian wind profile parameters (and their 1-sigma errors) are printed to the terminal after the code completes. The synthetic (convolved) 2D wind field is written to a Python pickle in the current working directory, and the best-fitting latitudinal wind speed profile is written to a text file.
 
 The code requires Python 3, scipy and astropy to be installed.
