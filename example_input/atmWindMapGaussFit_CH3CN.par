@@ -2,7 +2,7 @@ obsWindField="CH3CN_windMap.pickle"   #Python pickle containing wind speed (and 
 
 mol = 'CH3CN'   #Molecule name
 mass=41  #Molecular mass /amu
-transition = 187  #Zero-indexed transition from JPL catalog file
+transition = 239  #Zero-indexed transition from JPL catalog file
 
 #Set up the (linear gradient) abundance profile as a function of altitude
 alt1 = 200. #Cut-in altitude /km (zero abundance below)
