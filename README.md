@@ -7,7 +7,7 @@ The mean velocity along the line-of-sight through each pixel in the synthetic (c
 
 Run this code directly from the command line, using supplied example_input files as a template:
 
-e.g.> ./atmWindMapGaussFit.py <input_parameter_filename.par>
+e.g.> ./atmWindMapGaussFitFWtau.py <input_parameter_filename.par>
 
 Example input parameter files are in the example_input/ directory.
 
