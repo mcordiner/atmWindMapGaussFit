@@ -6,6 +6,22 @@
 # Then we take the moment 1 of the synthetic (convolved) data cube and compare it with observed Doppler map to optimize the wind profile. 
 # The convolved wind map is flux-weighted according to the molecular emission, based on a supplied vertical abundance profile.
 
+#    Copyright (C) Martin A. Cordiner (cordiner@gmail.com)
+
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
 
 import os,sys
 import numpy as np
@@ -141,7 +157,7 @@ def getWind(vpeak,offset,fwhm,xnew,ynew):
    # Doppler shift of each cell. 1st term is the projection of the wind vector along the line of sight. 3rd term accounts for the polar tilt
    dop = (d/rho) * vfun(vpeak,offset,fwhm,lats) * np.cos(sublat)
  
-   # Get it the way round I think it should be (a,b,c --> x,y,z) (this leads to weird reversed indices in dop for modelCube)
+   # Get the cube the "right way round" in my head (a,b,c --> x,y,z) (this leads to weird reversed indices in dop for modelCube)
    dop=dop.transpose((2,0,1)) 
 
    # Set up velocity grid   
@@ -219,7 +235,7 @@ def doPlot(data,extent,fig,num):
 
    norm = colors.Normalize(vmin=data.min(),vmax=data.max())
    c=ax.imshow(data,extent=[-extent,extent,-extent,extent],origin='lower',interpolation='nearest',norm=norm,zorder=-21,cmap=cmap)
-   levels = np.array([-15,-14,-13,-12,-11,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]) * 25
+   levels = np.array([-15,-14,-13,-12,-11,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]) * 25.
    co=ax.contour(data,levels=levels,extent=[-extent,extent,-extent,extent],origin='lower',colors='k',linewidths=0.75,zorder=-20)
    ax.clabel(co,fmt="%d")
 
@@ -251,7 +267,7 @@ def doPlot(data,extent,fig,num):
 
    
 ###################################################################
-#  MAIN PROGRAM                                                   #
+#  START OF MAIN PROGRAM                                          #
 ###################################################################
 
 parinfo=[]
@@ -280,7 +296,7 @@ parinfo[2]['limits']=[10,150]
 
 #Load the observed wind field
 r=pickle.load(open(obsWindField,"rb"), encoding='latin-1')
-# Doppler-Correct for velocity offset (fixing situation where velocity errors are (close to) zero due to improper Monte Carlo runs)
+# Doppler-Correct for velocity offset (fixing situation where some velocity errors are (close to) zero due to improper Monte Carlo runs)
 r['v_errup'][r['v_errup']<1e-6]=1e30
 r['v_errlo'][r['v_errlo']<1e-6]=1e30
 #obsWind = (r['v']-np.average(r['v'],weights=2./(r['v_errup']+r['v_errlo']))).transpose() * 1000. 
