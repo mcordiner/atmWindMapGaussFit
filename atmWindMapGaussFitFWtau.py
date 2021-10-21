@@ -7,12 +7,12 @@ import os,sys
 import numpy as np
 from matplotlib import pyplot as plt 
 from scipy.stats import scoreatpercentile,chi2
-from pymodules.mpfit import mpfit
-from pymodules.titan import getTeanT
-from pymodules import jplcat as JPLcat
-from pymodules import jpldat as JPLdat
-from pymodules.io import write2col
-from pymodules.constantsSI import h,k,amu
+from mpfit import mpfit
+from titan import getTeanT
+import jplcat as JPLcat
+import jpldat as JPLdat
+from readwrite import write2col
+from constantsSI import h,k,amu
 from scipy.interpolate import interp1d,interp2d
 from astropy.convolution import Gaussian2DKernel, convolve
 import pickle
@@ -69,8 +69,8 @@ beamxkm=beamxas*725.27*distance
 beamykm=beamyas*725.27*distance
 
 # Atmospheric density interpolator
-home = os.environ.get('HOME')
-radius,density=np.loadtxt(home+'/projects/titan/Krasnopolsky/densities_extrapolated.txt',unpack=1)
+home = os.getcwd()
+radius,density=np.loadtxt(home+'/densities_extrapolated.txt',unpack=1)
 densityinterp=interp1d(radius,density,kind='linear',bounds_error=False,fill_value=0.0) 
 
 # Set up the 3D grid axes for atmospheric model
@@ -103,8 +103,8 @@ dopsigmaGrid = (2.*k*Tgrid/(mass*amu))**0.5
 NGrid=a_I(radii) * densityinterpradiishadow * modelscale * 1e5
 
 #Get the emission model
-catfilename = home+'/scripts/JPL/'+mol+'.cat'
-datfilename = home+'/scripts/JPL/'+mol+'.dat'
+catfilename = home+'/JPL/'+mol+'.cat'
+datfilename = home+'/JPL/'+mol+'.dat'
 catfile = open(catfilename,'r')
 datfile = open(datfilename,'r')
 jplcat = JPLcat.jplcat(catfile)
