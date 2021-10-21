@@ -3,7 +3,7 @@ Python executable code to generate best-fitting Gaussian wind speed profile (as 
 
 A synthetic Doppler wind map is generated using on the supplied latitudinal wind profile - parameterised by the gaussian peak velocity, FWHM and latitudinal offset. 
 
-The mean velocity along the line-of-sight through each pixel in the synthetic (convolved) data cube is generated and compared with the observed Doppler map using a least squares fit, to optimize the wind profile. The convolved wind map is flux-weighted according to the molecular emission, based on the supplied vertical abundance profile.
+A 3D grid of spectral opacities and radial velocities is constructed based on the supplied vertical abundance profile and an initial guess for the wind velocity profile (as a function of latitude). This grid is then raytraced to produce a spectral-spatial data cube, which is then convolved with a telescope point-spread function. The mean Doppler shift of the emitted flux from each pixel in the convolved (synthetic) data cube is generated and compared with the observed Doppler map using a least squares fit, to optimize the latitudinal wind profile. 
 
 Run this code directly from the command line, using supplied example_input files as a template:
 
