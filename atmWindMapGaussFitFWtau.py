@@ -24,7 +24,7 @@ from astropy.io import fits as pyfits
 
 import pdb
 
-global platescale,distance,sublat,ccw,beamxas,beamyas,beampa,vpeak,offset,fwhm,lat,pfix,xkm,ykm,mass
+global platescale,distance,sublat,ccw,beamxas,beamyas,beampa,vpeak,offset,fwhm,lat,pfix,xkm,ykm,mass,obsWindField
 
 modelscale = 100. # pixel size of wind model (km) - tested OK for CH3CN and HNC
 modelsize = 12000./modelscale  # Number of pixels in model (needs to be much bigger than data region to avoid deconvolution issues)
@@ -92,7 +92,7 @@ densityinterpradiishadow = np.ma.array(densityinterpradii, mask = np.invert(atmo
 
 # Get temperatures as a function of radius
 r=np.arange(titanRad,titanRad+5000.,10)
-T_r=getTeanT(r-titanRad)
+T_r=getTeanT(home,r-titanRad)
 
 # Get abundance values as a function of (1D) radius
 a_r=abundance(alt1+titanRad,loga1,alt2+titanRad,loga2,r)
@@ -339,7 +339,7 @@ parinfo[2]['limits']=[10,150]
 
 
 #Load the observed wind field
-r=pickle.load(open("ltefitalma.results.pickle","rb"), encoding='latin-1')
+r=pickle.load(open(obsWindField,"rb"), encoding='latin-1')
 # Doppler-Correct for velocity offset (fixing situation where velocity errors are (close to) zero due to improper Monte Carlo runs)
 r['v_errup'][r['v_errup']<1e-6]=1e30
 r['v_errlo'][r['v_errlo']<1e-6]=1e30
